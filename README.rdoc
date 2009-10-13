@@ -1,0 +1,64 @@
+== Introduction
+
+Project Opener consists of a Ruby and two Bash scripts to aid quick-navigation
+between projects.
+
+== Installation
+
+To install directly from GitHub:
+
+  $ cd /path/to/workspace
+  $ git://github.com/marcbowes/project-opener.git
+
+== Getting started
+
+Add the following to the end of ~/.bashrc
+
+  # Project-Opener
+  # -- var
+    export PO_LOCATION="/path/to/project-opener"
+    export PO_WORKSPACE="/path/to/workspace"
+    # This is the default depth setting
+    # export PO_DEPTH=1 
+  # -- function
+  po()
+  {
+      . ${PO_LOCATION}/po.sh $*
+  }
+
+== Usage
+
+Simply type `po name-of-project`. Search is done recursively from the specificed
+workspace path, up to the maximum specified depth. Matches are done via a
+regular expression.
+
+== Pitfalls
+
+Untested. Ensure both shell scripts have execution privileges. Please report
+issues to me.
+
+== License
+
+Copyright (c) 2009 Marc Bowes
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
