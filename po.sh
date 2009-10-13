@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cd `./project-opener.sh $1`
+cd `${PO_LOCATION}/project-opener.sh $1`
