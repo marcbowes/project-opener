@@ -21,8 +21,11 @@ class Finder
     end
   
     def find_candidates(dirs = before_find_candidates, depth = 0)
+      # Kill non-directories
+      dirs.reject! { |dir| !File.directory?(dir) }
+      
       # Nothing to do
-      return dirs if dirs.empty? || depth > @depth
+      return if dirs.empty? || depth > @depth
       
       # Search for candidates at this depth
       dirs.each do |dir|

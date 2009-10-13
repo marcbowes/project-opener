@@ -28,7 +28,7 @@ Add the following to the end of ~/.bashrc
 
 == Usage
 
-Simply type `po name-of-project`. Search is done recursively from the specificed
+Simply type +po name-of-project+. Search is done recursively from the specificed
 workspace path, up to the maximum specified depth. Matches are done via a
 regular expression.
 
